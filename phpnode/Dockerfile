@@ -14,4 +14,6 @@ RUN apt-get update && apt-get install -y wget apt-transport-https && \
   apt-get remove --purge -y wget && \
   apt-get autoremove -y && rm -rf /var/lib/apt/lists/*  
 
+RUN mkdir /app && chown debian:debian /app
+
 USER debian
