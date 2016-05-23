@@ -16,4 +16,5 @@ RUN apt-get update && apt-get install -y wget apt-transport-https && \
 
 RUN mkdir /app && chown debian:debian /app
 
+WORKDIR /app
 USER debian
