@@ -1,6 +1,6 @@
 {
   "logger": {
-    "level": "info",
+    "level": "{LOGLEVEL}",
     "frontends": [
       {
         "formatter": {
