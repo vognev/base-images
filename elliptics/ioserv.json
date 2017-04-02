@@ -25,7 +25,7 @@
       "{REMOTE_IP}:{REMOTE_PORT}:2"
     ],
     "address": [
-      "0.0.0.0:{REMOTE_PORT}:2"
+      "{PUBLIC_IP}:{REMOTE_PORT}:2-2"
     ],
     "wait_timeout": 60,
     "check_timeout": 60,
@@ -40,7 +40,7 @@
     "server_net_prio": 1,
     "client_net_prio": 6,
     "cache": {
-      "size": 102400
+      "size": 68719476736
     },
     "indexes_shard_count": 2,
     "monitor": {
