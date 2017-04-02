@@ -22,10 +22,10 @@
     "join": true,
     "flags": 4,
     "remote": [
-      "autodiscovery:224.0.0.5:1025:2"
+      "{REMOTE_IP}:1025:2"
     ],
     "address": [
-      "localhost:1025:2-0"
+      "{PUBLIC_IP}:1025:2-0"
     ],
     "wait_timeout": 60,
     "check_timeout": 60,
@@ -34,7 +34,7 @@
     "net_thread_num": 2,
     "daemon": false,
     "parallel": true,
-    "auth_cookie": "ce14258d8c0af064140fdc29767944c5",
+    "auth_cookie": "{AUTH_COOKIE}",
     "bg_ionice_class": 3,
     "bg_ionice_prio": 0,
     "server_net_prio": 1,

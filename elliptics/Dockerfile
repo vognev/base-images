@@ -2,7 +2,7 @@ FROM vognev/base
 
 ENV ELLIPTICS_VERSION 2.26.10.3
 
-RUN apt-get update && apt-get install -y curl &&\
+RUN apt-get update && apt-get install -y curl iproute2 &&\
  apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 RUN curl http://repo.reverbrain.com/REVERBRAIN.GPG | apt-key add - &&\
@@ -11,6 +11,7 @@ RUN curl http://repo.reverbrain.com/REVERBRAIN.GPG | apt-key add - &&\
  apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 ADD ioserv.json /etc/ioserv.json
+
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
