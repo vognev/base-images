@@ -22,10 +22,10 @@
     "join": true,
     "flags": 4,
     "remote": [
-      "{REMOTE_IP}:1025:2"
+      "{REMOTE_IP}:{ELLIPTICS_PORT}:2"
     ],
     "address": [
-      "{PUBLIC_IP}:1025:2-0"
+      "{PUBLIC_IP}:{ELLIPTICS_PORT}:2"
     ],
     "wait_timeout": 60,
     "check_timeout": 60,
