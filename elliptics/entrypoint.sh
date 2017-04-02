@@ -7,10 +7,11 @@ mkdir -p /var/lib/elliptics/{history,blobdata}
 PUBLIC_IP=`ip route get 8.8.8.8 | grep dev | awk '{print $7}'`
 REMOTE_IP=${REMOTE_IP:-autodiscovery:224.0.0.5}
 AUTH_COOKIE=${AUTH_COOKIE:-elliptics}
-ELLIPTICS_PORT=${ELLIPTICS_PORT:-1025}
+REMOTE_PORT=${REMOTE_PORT:-1025}
 sed \
     -e "s/{PUBLIC_IP}/$PUBLIC_IP/" \
     -e "s/{REMOTE_IP}/$REMOTE_IP/" \
+    -e "s/{REMOTE_PORT}/$REMOTE_PORT/" \
     -e "s/{AUTH_COOKIE}/$AUTH_COOKIE/" \
     -i /etc/ioserv.json
 
