@@ -25,7 +25,7 @@
       "{REMOTE_IP}:{REMOTE_PORT}:2"
     ],
     "address": [
-      "{PUBLIC_IP}:{REMOTE_PORT}:2"
+      "0.0.0.0:{REMOTE_PORT}:2"
     ],
     "wait_timeout": 60,
     "check_timeout": 60,
