@@ -4,8 +4,8 @@ ADD https://getcomposer.org/composer.phar /usr/local/bin/composer
 
 RUN chmod a+rx /usr/local/bin/composer && \
   apt-get update && apt-get install -y wget && \
-  wget -O - http://dotdeb.mirror.k0nsl.org/dotdeb.gpg | apt-key add - && \
-  echo "deb http://dotdeb.mirror.k0nsl.org jessie all" > /etc/apt/sources.list.d/dotdeb.list && \
+  wget -O - https://www.dotdeb.org/dotdeb.gpg | apt-key add - && \
+  echo "deb http://packages.dotdeb.org jessie all" > /etc/apt/sources.list.d/dotdeb.list && \
   apt-get update && apt-get install -y php7.0-cli php7.0-mysql php7.0-xdebug php7.0-curl && \
   apt-get remove --purge -y wget && \
   rm -rf /var/lib/apt/lists/*
