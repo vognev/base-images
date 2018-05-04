@@ -1,7 +1,5 @@
 FROM vognev/base
 
-ADD https://getcomposer.org/composer.phar /usr/local/bin/composer
-
 ARG PHP=7.0
 ENV PHP ${PHP:-7.0}
 
@@ -23,6 +21,8 @@ apt-get update && apt-get install -y nodejs && \
 npm install -g gulp-cli yarn && \
 apt-get remove --purge -y wget && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
+ADD https://getcomposer.org/composer.phar /usr/local/bin/composer
+RUN chmod a+rx /usr/local/bin/composer
 RUN mkdir /app && chown debian:debian /app
 
 WORKDIR /app
