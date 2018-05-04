@@ -1,7 +1,6 @@
 FROM vognev/base
 
 ARG PHP=7.0
-ENV PHP ${PHP:-7.0}
 
 RUN apt-get update && apt-get install -y wget apt-transport-https && \
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
