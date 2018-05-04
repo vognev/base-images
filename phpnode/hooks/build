@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if   [ "$DOCKER_TAG" = "7.1" ]; then
+    docker build --build-arg=PHP=7.1 -t ${IMAGE_NAME} .
+elif [ "$DOCKER_TAG" = "7.0" ]; then
+    docker build --build-arg=PHP=7.0 -t ${IMAGE_NAME} .
+else
+    docker build -t ${IMAGE_NAME} .
+fi
