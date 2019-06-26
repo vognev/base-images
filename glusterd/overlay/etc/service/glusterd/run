@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+ulimit -n 65536
+
+if [ -f /etc/default/glusterd ]; then
+    source /etc/default/glusterd
+fi
+
+LOG_LEVEL=INFO
+
+exec /usr/sbin/glusterd -p /var/run/glusterd.pid  --log-level $LOG_LEVEL $GLUSTERD_OPTIONS

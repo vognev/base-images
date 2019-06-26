@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export PYTHONPATH=/usr/lib/python2.7/dist-packages:$PYTHONPATH
+
+exec /usr/sbin/glustereventsd --pid-file /var/run/glustereventsd.pid

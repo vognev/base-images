@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+CACHE=/var/cache/apache2/mod_cache_disk
+CACHE_LIMIT=${CACHE_LIMIT:-10G}
+CACHE_SLEEP=${CACHE_SLEEP:-1h}
+
+while true; do
+    /usr/bin/htcacheclean -n -t -p $CACHE -l $CACHE_LIMIT
+    echo "Cleaned $CACHE with $CACHE_LIMIT limit"
+    sleep $CACHE_SLEEP
+done
