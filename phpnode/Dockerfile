@@ -20,7 +20,7 @@ apt-get update && apt-get install -y nodejs && \
 npm install -g gulp-cli yarn && \
 apt-get remove --purge -y wget && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
-ADD https://getcomposer.org/composer.phar /usr/local/bin/composer
+ADD https://getcomposer.org/download/1.10.7/composer.phar /usr/local/bin/composer
 RUN chmod a+rx /usr/local/bin/composer
 RUN mkdir /app && chown debian:debian /app
 
