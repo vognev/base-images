@@ -1,4 +1,4 @@
-FROM vognev/base
+FROM vognev/base:stretch
 
 USER root
 RUN apt-get update && apt-get install -y nginx-light\
